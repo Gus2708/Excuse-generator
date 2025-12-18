@@ -3,11 +3,15 @@ let action = ['ate', 'peed', 'crushed', 'broke'];
 let what = ['my homework', 'my phone', 'the car'];
 let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
 
+function randomSelector ( array ) {
+    return array[Math.floor(Math.random() * array.length)];
+};
+
 function generateExcuse() {
-    let whoRandom = who[Math.floor(Math.random() * who.length)];
-    let actionRandom = action[Math.floor(Math.random() * action.length)];
-    let whatRandom = what[Math.floor(Math.random() * what.length)];
-    let whenRandom = when[Math.floor(Math.random() * when.length)];
+    let whoRandom = randomSelector( who );
+    let actionRandom = randomSelector( action );
+    let whatRandom = randomSelector( what );
+    let whenRandom = randomSelector( when );
 
     let excuse = `${whoRandom} ${actionRandom} ${whatRandom} ${whenRandom}`;
 
